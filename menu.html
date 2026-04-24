@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the seasonal menu at Maison Beausoleil — fresh seafood, Acadian classics, and handcrafted cocktails in Moncton, NB." />
+  <title>Menu | Maison Beausoleil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        Maison Beausoleil
+        <span>Moncton, New Brunswick</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Online <span class="cart-badge" style="display:none">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="btn-nav">Order Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== MENU HERO ==================== -->
+  <header class="menu-hero">
+    <div class="container">
+      <span class="section-label">Saison Actuelle</span>
+      <h1 class="section-title">Our Menu</h1>
+      <p>Celebrating the flavours of New Brunswick, one plate at a time</p>
+    </div>
+  </header>
+
+  <!-- ==================== CATEGORY TABS ==================== -->
+  <div class="menu-tabs">
+    <div class="container">
+      <div class="menu-tabs__inner" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab-btn active" data-tab="appetizers" role="tab" aria-selected="true">Appetizers</button>
+        <button class="menu-tab-btn" data-tab="mains" role="tab" aria-selected="false">Mains</button>
+        <button class="menu-tab-btn" data-tab="desserts" role="tab" aria-selected="false">Desserts</button>
+        <button class="menu-tab-btn" data-tab="drinks" role="tab" aria-selected="false">Drinks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MENU CONTENT ==================== -->
+  <main class="menu-content">
+    <div class="container">
+
+      <!-- ---- APPETIZERS ---- -->
+      <section class="menu-section active" data-section="appetizers" aria-label="Appetizers">
+        <div class="menu-grid">
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Bay of Fundy Oysters</h3>
+              <span class="menu-item__price">$22</span>
+            </div>
+            <p class="menu-item__desc">Half-dozen fresh oysters from Shippagan, served with champagne mignonette, house hot sauce, and lemon.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+              <span class="tag tag-new">Chef's Pick</span>
+            </div>
+            <button class="add-to-order" data-id="app-01" data-name="Bay of Fundy Oysters" data-price="22">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Lobster Bisque</h3>
+              <span class="menu-item__price">$18</span>
+            </div>
+            <p class="menu-item__desc">Rich PEI lobster cream bisque with tarragon oil, crispy leek garnish, and a touch of Armagnac.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="app-02" data-name="Lobster Bisque" data-price="18">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Fiddlehead &amp; Brie Tart</h3>
+              <span class="menu-item__price">$17</span>
+            </div>
+            <p class="menu-item__desc">Seasonal NB fiddleheads on a buttery puff pastry with local Brie, walnut crumble, and wildflower honey.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegetarian</span>
+            </div>
+            <button class="add-to-order" data-id="app-03" data-name="Fiddlehead & Brie Tart" data-price="17">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Charcuterie du Terroir</h3>
+              <span class="menu-item__price">$28</span>
+            </div>
+            <p class="menu-item__desc">A curated board of Atlantic cured meats, local aged cheeses, house pickles, whole-grain mustard, and artisan bread.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-new">Popular</span>
+            </div>
+            <button class="add-to-order" data-id="app-04" data-name="Charcuterie du Terroir" data-price="28">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Scallop Crudo</h3>
+              <span class="menu-item__price">$24</span>
+            </div>
+            <p class="menu-item__desc">Thinly sliced Digby scallops dressed with citrus vinaigrette, pickled shallots, dill oil, and sea salt.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+              <span class="tag tag-new">Seasonal</span>
+            </div>
+            <button class="add-to-order" data-id="app-05" data-name="Scallop Crudo" data-price="24">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Roasted Beet Salad</h3>
+              <span class="menu-item__price">$16</span>
+            </div>
+            <p class="menu-item__desc">Heritage beets from Beauséjour Farms with goat cheese crumble, candied pecans, orange segments, and sherry vinaigrette.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegetarian</span>
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="app-06" data-name="Roasted Beet Salad" data-price="16">Add to Order</button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ---- MAINS ---- -->
+      <section class="menu-section" data-section="mains" aria-label="Main Courses">
+        <div class="menu-grid">
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Whole Butter-Poached Lobster</h3>
+              <span class="menu-item__price">$68</span>
+            </div>
+            <p class="menu-item__desc">1.5 lb live lobster poached in cultured butter, served with saffron risotto, asparagus, and lobster bisque reduction.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+              <span class="tag tag-new">Signature</span>
+            </div>
+            <button class="add-to-order" data-id="main-01" data-name="Whole Butter-Poached Lobster" data-price="68">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Rack of Lamb</h3>
+              <span class="menu-item__price">$56</span>
+            </div>
+            <p class="menu-item__desc">New Brunswick lamb, herb-crusted with fiddlehead gremolata, served with roasted potato terrine and rosemary jus.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="main-02" data-name="Rack of Lamb" data-price="56">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Pan-Seared Halibut</h3>
+              <span class="menu-item__price">$44</span>
+            </div>
+            <p class="menu-item__desc">Atlantic halibut fillet with brown butter, capers, local clam chowder velouté, baby gem lettuce, and preserved lemon.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="main-03" data-name="Pan-Seared Halibut" data-price="44">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Lobster Pappardelle</h3>
+              <span class="menu-item__price">$42</span>
+            </div>
+            <p class="menu-item__desc">House-made pappardelle tossed with chunky lobster, cherry tomatoes, saffron cream, and micro herbs.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-new">Most Loved</span>
+            </div>
+            <button class="add-to-order" data-id="main-04" data-name="Lobster Pappardelle" data-price="42">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Mushroom &amp; Truffle Risotto</h3>
+              <span class="menu-item__price">$34</span>
+            </div>
+            <p class="menu-item__desc">Wild mushrooms from the Fundy Highlands, Arborio rice, aged Parmesan, black truffle oil, and chive oil.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegetarian</span>
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="main-05" data-name="Mushroom & Truffle Risotto" data-price="34">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">48-Hour Duck Confit</h3>
+              <span class="menu-item__price">$48</span>
+            </div>
+            <p class="menu-item__desc">Slow-cooked duck leg with creamy lentils du Puy, pickled red cabbage, and a rich red wine gastrique.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="main-06" data-name="48-Hour Duck Confit" data-price="48">Add to Order</button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ---- DESSERTS ---- -->
+      <section class="menu-section" data-section="desserts" aria-label="Desserts">
+        <div class="menu-grid">
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Tarte Tatin</h3>
+              <span class="menu-item__price">$14</span>
+            </div>
+            <p class="menu-item__desc">Upside-down apple tart with Annapolis Valley apples, caramel, and clotted cream.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-new">Chef's Favourite</span>
+            </div>
+            <button class="add-to-order" data-id="des-01" data-name="Tarte Tatin" data-price="14">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Blueberry Crème Brûlée</h3>
+              <span class="menu-item__price">$13</span>
+            </div>
+            <p class="menu-item__desc">Classic custard with a wild NB blueberry compote and a perfectly caramelised sugar top.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="des-02" data-name="Blueberry Crème Brûlée" data-price="13">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Chocolate Fondant</h3>
+              <span class="menu-item__price">$15</span>
+            </div>
+            <p class="menu-item__desc">Warm dark chocolate lava cake with sea-salted caramel sauce and vanilla bean ice cream.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegetarian</span>
+            </div>
+            <button class="add-to-order" data-id="des-03" data-name="Chocolate Fondant" data-price="15">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Cheese Trolley Selection</h3>
+              <span class="menu-item__price">$22</span>
+            </div>
+            <p class="menu-item__desc">Three Atlantic Canadian cheeses with honey, seasonal fruit preserve, and house-made crackers.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegetarian</span>
+            </div>
+            <button class="add-to-order" data-id="des-04" data-name="Cheese Trolley Selection" data-price="22">Add to Order</button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ---- DRINKS ---- -->
+      <section class="menu-section" data-section="drinks" aria-label="Drinks">
+        <div class="menu-grid">
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Acadian Sour</h3>
+              <span class="menu-item__price">$16</span>
+            </div>
+            <p class="menu-item__desc">House cocktail with Fils du Roy gin, blueberry shrub, lemon juice, egg white, and Angostura bitters.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-new">House Special</span>
+            </div>
+            <button class="add-to-order" data-id="drk-01" data-name="Acadian Sour" data-price="16">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Bay of Fundy Spritz</h3>
+              <span class="menu-item__price">$15</span>
+            </div>
+            <p class="menu-item__desc">Aperol, local cider, Prosecco, soda water, and a rosemary sprig over ice.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-lc">Low ABV option available</span>
+            </div>
+            <button class="add-to-order" data-id="drk-02" data-name="Bay of Fundy Spritz" data-price="15">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">White Wine — Glass</h3>
+              <span class="menu-item__price">$14</span>
+            </div>
+            <p class="menu-item__desc">Rotating selection of Old World whites — ask your server for today's pour. Chablis or Sancerre most evenings.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="drk-03" data-name="White Wine (Glass)" data-price="14">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Red Wine — Glass</h3>
+              <span class="menu-item__price">$14</span>
+            </div>
+            <p class="menu-item__desc">Thoughtfully chosen reds that pair beautifully with our mains. Burgundy or Rioja most evenings.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="drk-04" data-name="Red Wine (Glass)" data-price="14">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Sparkling Water</h3>
+              <span class="menu-item__price">$5</span>
+            </div>
+            <p class="menu-item__desc">750ml San Pellegrino sparkling mineral water, served tableside.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-gf">Gluten-Free</span>
+              <span class="tag tag-vg">Vegan</span>
+            </div>
+            <button class="add-to-order" data-id="drk-05" data-name="Sparkling Water" data-price="5">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item__header">
+              <h3 class="menu-item__name">Loose-Leaf Tea</h3>
+              <span class="menu-item__price">$6</span>
+            </div>
+            <p class="menu-item__desc">Selection of Maritime Naturals herbal and classic teas, served in a warming pot with local honey.</p>
+            <div class="menu-item__tags">
+              <span class="tag tag-vg">Vegan</span>
+              <span class="tag tag-gf">Gluten-Free</span>
+            </div>
+            <button class="add-to-order" data-id="drk-06" data-name="Loose-Leaf Tea" data-price="6">Add to Order</button>
+          </article>
+
+        </div>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- Cart Toast Notification -->
+  <div class="cart-toast" role="alert" aria-live="polite">
+    <span>🛒</span>
+    <span class="toast-item">"Item" added</span>
+    <a href="order.html">View Cart →</a>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Maison Beausoleil</p>
+          <span class="footer__brand-sub">Fine Dining · Moncton, NB</span>
+          <p class="footer__brand-desc">Modern Acadian cuisine celebrating the terroir of New Brunswick.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Hours</p>
+          <ul class="footer__links">
+            <li><a>Tues–Fri: 5 – 10 pm</a></li>
+            <li><a>Saturday: 4 – 11 pm</a></li>
+            <li><a>Sunday: 4 – 9 pm</a></li>
+            <li><a>Monday: Closed</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="tel:+15065550182">(506) 555-0182</a></li>
+            <li><a href="mailto:hello@maisonbeausoleil.ca">hello@maisonbeausoleil.ca</a></li>
+            <li><a>123 Main St, Moncton NB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Maison Beausoleil. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">𝓘</a>
+          <a href="#" aria-label="Facebook">𝐟</a>
+          <a href="#" aria-label="TripAdvisor">★</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

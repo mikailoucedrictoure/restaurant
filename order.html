@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Order online from Maison Beausoleil in Moncton, NB. Pickup and local delivery available." />
+  <title>Order Online | Maison Beausoleil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav scrolled" id="mainNav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        Maison Beausoleil
+        <span>Moncton, New Brunswick</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Online <span class="cart-badge" style="display:none">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="menu.html" class="btn-nav">+ Add Items</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== ORDER PAGE BODY ==================== -->
+  <div class="order-page">
+
+    <!-- Header -->
+    <header class="order-header">
+      <div class="container">
+        <span class="section-label">Checkout</span>
+        <h1 class="section-title">Your Order</h1>
+        <p>Review your cart, fill in your details, and we'll have it ready for you</p>
+      </div>
+    </header>
+
+    <!-- Main Grid -->
+    <div class="container">
+      <div class="order-grid">
+
+        <!-- ---- LEFT: Order Form ---- -->
+        <div>
+          <div class="order-form-wrap">
+            <h2>Delivery Details</h2>
+            <p>All fields are required. We currently offer pickup and local delivery within Moncton city limits.</p>
+
+            <!--
+              Web3Forms Integration
+              Access Key: c2e08d0e-1142-44b0-81aa-ddd85755ebf6
+              The hidden #orderDetails field is populated by script.js with the full cart summary.
+            -->
+            <form id="orderForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+              <!-- Web3Forms Access Key (required) -->
+              <input type="hidden" name="access_key" value="c2e08d0e-1142-44b0-81aa-ddd85755ebf6" />
+
+              <!-- Subject line for the email -->
+              <input type="hidden" name="subject" value="New Online Order — Maison Beausoleil" />
+
+              <!-- Bot honeypot protection -->
+              <input type="checkbox" name="botcheck" style="display:none" />
+
+              <!-- ORDER DETAILS — populated by script.js before submission -->
+              <input type="hidden" name="Order Details" id="orderDetails" value="" />
+
+              <!-- Personal Info -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="First Name" placeholder="Émilie" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="Last Name" placeholder="Leblanc" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="Email" placeholder="emilie@example.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="Phone" placeholder="(506) 555-0100" required />
+                </div>
+              </div>
+
+              <!-- Order Type -->
+              <div class="form-group">
+                <label for="orderType">Order Type</label>
+                <select id="orderType" name="Order Type" required>
+                  <option value="">— Select pickup or delivery —</option>
+                  <option value="Pickup — Ready in 45 minutes">Pickup — Ready in ~45 minutes</option>
+                  <option value="Local Delivery — Moncton City Limits">Local Delivery (Moncton city limits)</option>
+                </select>
+              </div>
+
+              <!-- Delivery Address (shown/hidden by JS based on selection) -->
+              <div class="form-group" id="addressGroup" style="display:none">
+                <label for="address">Delivery Address</label>
+                <input type="text" id="address" name="Delivery Address" placeholder="123 Rue Principale, Moncton, NB E1C 1A1" />
+              </div>
+
+              <!-- Preferred Time -->
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="Preferred Time" min="17:00" max="21:30" required />
+              </div>
+              <p class="form-note">We accept orders between 5:00 PM and 9:30 PM (Tues–Sun).</p>
+
+              <!-- Special Instructions -->
+              <div class="form-group">
+                <label for="notes">Special Instructions / Allergies</label>
+                <textarea id="notes" name="Special Instructions" placeholder="E.g. nut allergy, extra sauce, no onions…"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="submit-order" id="submitOrder">
+                Place Order →
+              </button>
+
+              <!-- Success Banner (shown by JS after successful submission) -->
+              <div class="order-success" id="orderSuccess">
+                <h3>🎉 Order Received!</h3>
+                <p>Thank you! We've sent a confirmation to your email. Your order will be ready at the requested time. Call us at (506) 555-0182 if you need to make changes.</p>
+              </div>
+
+            </form>
+          </div><!-- /order-form-wrap -->
+        </div>
+
+        <!-- ---- RIGHT: Cart Summary ---- -->
+        <div>
+          <div class="cart-panel">
+            <div class="cart-panel__header">
+              <h3>Order Summary</h3>
+              <span class="cart-panel__count" id="cartCount">0 items</span>
+            </div>
+
+            <!-- Dynamic cart items rendered by script.js -->
+            <div class="cart-items" id="cartItems">
+              <p class="cart-empty">Your cart is empty. <a href="menu.html">Browse our menu</a> to add items.</p>
+            </div>
+
+            <!-- Pricing Breakdown -->
+            <div class="cart-summary">
+              <div class="cart-summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>HST (15% — NB Tax)</span>
+                <span id="hst">$0.00</span>
+              </div>
+              <div class="cart-summary-row total">
+                <span>Total</span>
+                <span id="total">$0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional info card -->
+          <div style="background:var(--clr-dark); border-radius:4px; padding:1.5rem; margin-top:1.5rem; color:var(--clr-stone); font-size:0.85rem; line-height:1.8;">
+            <p style="color:var(--clr-gold); font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.75rem;">Need to add items?</p>
+            <p>Head back to our <a href="menu.html" style="color:var(--clr-gold);">menu page</a> to browse and add more dishes. Your cart is saved automatically.</p>
+            <br>
+            <p style="color:var(--clr-gold); font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:0.75rem;">Questions?</p>
+            <p>Call us at <a href="tel:+15065550182" style="color:var(--clr-gold);">(506) 555-0182</a> or email <a href="mailto:hello@maisonbeausoleil.ca" style="color:var(--clr-gold);">hello@maisonbeausoleil.ca</a></p>
+          </div>
+        </div>
+
+      </div><!-- /order-grid -->
+    </div><!-- /container -->
+  </div><!-- /order-page -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Maison Beausoleil</p>
+          <span class="footer__brand-sub">Fine Dining · Moncton, NB</span>
+          <p class="footer__brand-desc">Modern Acadian cuisine celebrating the terroir of New Brunswick.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Hours</p>
+          <ul class="footer__links">
+            <li><a>Tues–Fri: 5 – 10 pm</a></li>
+            <li><a>Saturday: 4 – 11 pm</a></li>
+            <li><a>Sunday: 4 – 9 pm</a></li>
+            <li><a>Monday: Closed</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="tel:+15065550182">(506) 555-0182</a></li>
+            <li><a href="mailto:hello@maisonbeausoleil.ca">hello@maisonbeausoleil.ca</a></li>
+            <li><a>123 Main St, Moncton NB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Maison Beausoleil. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">𝓘</a>
+          <a href="#" aria-label="Facebook">𝐟</a>
+          <a href="#" aria-label="TripAdvisor">★</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    /* Show/hide delivery address field based on order type */
+    const orderTypeEl  = document.getElementById('orderType');
+    const addressGroup = document.getElementById('addressGroup');
+    const addressInput = document.getElementById('address');
+
+    if (orderTypeEl) {
+      orderTypeEl.addEventListener('change', () => {
+        const isDelivery = orderTypeEl.value.includes('Delivery');
+        addressGroup.style.display = isDelivery ? 'flex' : 'none';
+        addressInput.required = isDelivery;
+      });
+    }
+  </script>
+</body>
+</html>

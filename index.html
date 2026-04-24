@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maison Beausoleil — Fine dining in Moncton, New Brunswick. Celebrating Acadian heritage through modern French-Canadian cuisine." />
+  <title>Maison Beausoleil | Fine Dining in Moncton, NB</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Scroll-fade utility -->
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    .fade-in.delay-1 { transition-delay: 0.15s; }
+    .fade-in.delay-2 { transition-delay: 0.3s; }
+    .fade-in.delay-3 { transition-delay: 0.45s; }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        Maison Beausoleil
+        <span>Moncton, New Brunswick</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Online <span class="cart-badge" style="display:none">0</span></a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="order.html" class="btn-nav">Reserve&nbsp;/ Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Est. 2018 · Moncton, New Brunswick</p>
+      <h1 class="hero__title">
+        A Table<br>
+        <em>Worth Gathering</em><br>
+        Around
+      </h1>
+      <p class="hero__subtitle">Modern Acadian cuisine, rooted in the terroir of the Maritimes</p>
+      <div class="hero__cta">
+        <a href="menu.html" class="btn btn-primary">Explore the Menu</a>
+        <a href="order.html" class="btn btn-outline">Order Online</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <!-- Image -->
+        <div class="about__img-wrap fade-in">
+          <img
+            class="about__img-main"
+            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=900&q=85"
+            alt="Chef preparing a dish at Maison Beausoleil"
+          />
+          <div class="about__img-badge">
+            <strong>6+</strong>
+            <span>Years of Excellence</span>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about__text fade-in delay-1">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Where Moncton's Spirit Meets the Plate</h2>
+          <div class="divider"><span class="divider__icon">✦</span></div>
+
+          <p>Maison Beausoleil was born from a simple belief: that the richest stories are told through food. Nestled in the heart of downtown Moncton — a city that thrives on its bilingual soul and Maritime warmth — we honour the Acadian culinary tradition with a contemporary lens.</p>
+          <p>Our menus change with the seasons, guided by relationships with local farmers across the Tantramar Marshes and fishermen from the Bay of Fundy. Whether it's a Tuesday lobster bisque or a Saturday tasting menu, every dish carries the landscape of New Brunswick within it.</p>
+          <p>Executive Chef Isabelle Cormier-Leblanc brings 20 years of culinary craft — trained in Paris, seasoned in Halifax, rooted in Moncton — to every plate that leaves our kitchen.</p>
+
+          <div class="about__features">
+            <div class="about__feature">
+              <span class="about__feature-icon">🦞</span>
+              <div>
+                <p class="about__feature-title">Local & Seasonal</p>
+                <p class="about__feature-desc">Sourced within 200km of downtown Moncton</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">🍷</span>
+              <div>
+                <p class="about__feature-title">Curated Wine List</p>
+                <p class="about__feature-desc">Old World classics &amp; Atlantic Canadian producers</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">🌊</span>
+              <div>
+                <p class="about__feature-title">Bay of Fundy Fresh</p>
+                <p class="about__feature-desc">Daily catch delivered each morning</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">🌿</span>
+              <div>
+                <p class="about__feature-title">Acadian Heritage</p>
+                <p class="about__feature-desc">Traditional techniques, modern creativity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MENU CTA ==================== -->
+  <section class="menu-cta fade-in">
+    <div class="container">
+      <span class="section-label" style="color:var(--clr-gold)">Our Offerings</span>
+      <h2 class="section-title">A Menu That Changes<br><em>With the Tides</em></h2>
+      <div class="divider" style="max-width:280px; margin:0 auto 1.5rem;"><span class="divider__icon">✦</span></div>
+      <p>From New Brunswick oysters to rack of lamb with fiddlehead gremolata, our menu is a love letter to the Maritimes written in flavour.</p>
+      <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;" class="fade-in">
+        <span class="section-label">Guest Voices</span>
+        <h2 class="section-title">What Moncton is Saying</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"The lobster pappardelle was unlike anything I've had in the Maritimes. The dining room feels like a warm embrace. We drove from Fredericton — absolutely worth every kilometre."</blockquote>
+          <cite>— Marie-Hélène D., Fredericton</cite>
+        </div>
+        <div class="testimonial-card fade-in delay-1">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"Moncton's best-kept secret. The tasting menu is extraordinary — each course tells a story about this province. Isabelle is a genius in the kitchen."</blockquote>
+          <cite>— James T., Moncton</cite>
+        </div>
+        <div class="testimonial-card fade-in delay-2">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <blockquote>"We hosted our anniversary dinner here and it could not have been more perfect. The staff made us feel like family. Maison Beausoleil is a national treasure."</blockquote>
+          <cite>— Sophie &amp; Marc R., Moncton</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">Maison Beausoleil</p>
+          <span class="footer__brand-sub">Fine Dining · Moncton, NB</span>
+          <p class="footer__brand-desc">A celebration of Acadian heritage and Maritime ingredients, told through the language of fine cuisine.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Hours</p>
+          <ul class="footer__links">
+            <li><a>Tues–Fri: 5 – 10 pm</a></li>
+            <li><a>Saturday: 4 – 11 pm</a></li>
+            <li><a>Sunday: 4 – 9 pm</a></li>
+            <li><a>Monday: Closed</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="tel:+15065550182">(506) 555-0182</a></li>
+            <li><a href="mailto:hello@maisonbeausoleil.ca">hello@maisonbeausoleil.ca</a></li>
+            <li><a>123 Main St, Moncton NB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Maison Beausoleil. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">𝓘</a>
+          <a href="#" aria-label="Facebook">𝐟</a>
+          <a href="#" aria-label="TripAdvisor">★</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
